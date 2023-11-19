@@ -83,6 +83,7 @@ exampleComponent:
           </div>
         </div>
       </div>
+      <div class="dt-dots-container"></div>
     </div>
   </div>
 </section>
@@ -92,6 +93,7 @@ exampleComponent:
   $(document).ready(function () {
     $(".carousel-container").slick({
       dots: true,
+      appendDots: $(".dt-dots-container"),
       slidesToShow: 1,
       centerPadding: "60px",
       slidesToScroll: 1,
