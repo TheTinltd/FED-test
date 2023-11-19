@@ -142,6 +142,7 @@ body {
     }
 
     .location {
+        text-transform: capitalize;
         color: $darkgrey
     }
 }
