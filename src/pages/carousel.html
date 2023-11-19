@@ -1,0 +1,33 @@
+---
+title: Carousel
+assetsPath: /assets/
+contentPath: /assets/content/
+projNamespaceClass: "starter-proj"
+exampleComponent:
+  {
+    heading: "Contacts",
+    carouselSlideArr:
+      [
+        {
+          title: "slide 1",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        },
+        {
+          title: "slide 2",
+          description: "Et pharetra pharetra massa massa ultricies mi quis hendrerit.",
+        },
+      ],
+  }
+---
+
+<section class="{{projNamespaceClass}}">
+  <h1>{{exampleComponent.heading}}</h1>
+  <ul>
+    {{#each exampleComponent.exampleArr }}
+    <li id="slide-{{@index}}">
+      <h3>{{title}}</h3>
+      <p>{{description}}</p>
+    </li>
+    {{/each}}
+  </ul>
+</section>
