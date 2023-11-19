@@ -33,6 +33,22 @@ exampleComponent:
       alt="carousel background image"
     />
     <div class="carousel-outer">
+      <div class="arrow-container">
+        <button type="button" class="prev-arrow slick-prev">
+          <img
+            src="{{root}}/assets/images/arrow-left.svg"
+            alt="previous arrow"
+            width="48px"
+          />
+        </button>
+        <button type="button" class="next-arrow slick-next">
+          <img
+            src="{{root}}/assets/images/arrow-right.svg"
+            alt="next arrow"
+            width="48px"
+          />
+        </button>
+      </div>
       <div class="carousel-container">
         <div class="carousel-slide">
           <div class="detail-container">
@@ -79,6 +95,8 @@ exampleComponent:
       slidesToShow: 1,
       centerPadding: "60px",
       slidesToScroll: 1,
+      prevArrow: $(".prev-arrow"),
+      nextArrow: $(".next-arrow"),
     });
   });
 </script>

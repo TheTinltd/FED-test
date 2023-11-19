@@ -53,8 +53,12 @@ body {
 
     @media screen and (min-width: 1024px) {
         flex-direction: row;
-        gap: 146px;
         align-items: start;
+        gap: 60px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 146px;
     }
 }
 
@@ -63,11 +67,15 @@ body {
     max-width: 189px;
 
     @media screen and (min-width: 600px) {
-        max-width: 420px;
+        max-width: 320px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        align-items: start;
+        gap: 60px;
     }
 }
-
-
 
 .carousel-outer {
     max-width: 285px;
@@ -122,7 +130,6 @@ body {
     font-family: $brandBodyFont;
     align-content: center;
     justify-content: center;
-
     margin: 0;
 
     .username {
@@ -166,5 +173,30 @@ body {
             color: white;
             background-color: black;
         }
+    }
+}
+
+/*  Slick Slider styling */
+/* Arrows */
+.slick-arrow {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 60px;
+    z-index: 99;
+    cursor: pointer;
+
+    &.slick-prev {
+        left: -25px;
+    }
+
+    &.slick-next {
+        right: -25px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        top: 0;
     }
 }
