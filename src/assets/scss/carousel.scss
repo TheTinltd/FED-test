@@ -1,7 +1,41 @@
 body {
-    margin: 0;
+    margin: 0 21px;
+
+    @media screen and (min-width: 768px) {
+        margin: 0 48px;
+    }
 }
 
-h1 {
-    color: $darkBlue
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: $darkBlue;
+    font-family: $brandHeadingFont;
+    letter-spacing: 1.5px;
+    padding: 0;
+    margin: 0;
+    line-height: 36.4px;
+
+    span {
+        height: 8px;
+        width: 100%;
+        top: 0;
+        margin-bottom: 20px;
+        display: block;
+        background: $darkBlue;
+    }
+}
+
+.header .carousel-indicators {
+    margin-top: 20px;
+    color: $darkBlue;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }

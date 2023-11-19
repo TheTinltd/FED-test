@@ -21,13 +21,11 @@ exampleComponent:
 ---
 
 <section class="{{projNamespaceClass}}">
-  <h1>{{exampleComponent.heading}}</h1>
-  <ul>
-    {{#each exampleComponent.exampleArr }}
-    <li id="slide-{{@index}}">
-      <h3>{{title}}</h3>
-      <p>{{description}}</p>
-    </li>
-    {{/each}}
-  </ul>
+  <div class="header">
+    <h1><span></span>{{exampleComponent.heading}}</h1>
+    <!-- Todo: replace with carousel dots -->
+    <div class="carousel-indicators">Lorem</div>
+  </div>
+
+  <div class="component-main"></div>
 </section>
