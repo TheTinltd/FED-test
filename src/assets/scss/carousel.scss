@@ -1,5 +1,7 @@
 body {
     margin: 0 21px;
+    letter-spacing: 1px;
+    overflow: hidden;
 
     @media screen and (min-width: 768px) {
         margin: 0 48px;
@@ -64,6 +66,8 @@ body {
     }
 }
 
+
+
 .carousel-outer {
     max-width: 285px;
     width: 100%;
@@ -83,8 +87,82 @@ body {
     @media screen and (min-width: 768px) {
         max-width: 688px;
         width: 100%;
+    }
+}
 
+.carousel-slide {
+    border-radius: 4px;
+    fill: #ffffff;
+    stroke-width: 1;
+    border: 2px solid $lightgrey;
+    padding: 16px;
+    margin: 0 24px;
+}
+
+.detail-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+    align-items: center;
+
+    img {
+        border-radius: 100%;
+        max-width: 100px;
+        width: 79px;
+        height: 79px;
+    }
+}
+
+.detail-container p {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: $brandBodyFont;
+    align-content: center;
+    justify-content: center;
+
+    margin: 0;
+
+    .username {
+        font-size: 16px;
+        color: $darkBlue;
+
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+        }
     }
 
+    .location {
+        color: $darkgrey
+    }
+}
 
+.btn-container {
+    display: flex;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 91px
+    }
+
+    .btn {
+        border: 2px solid black;
+        background: transparent;
+        border-radius: 25px;
+        width: 87px;
+        font-size: 16px;
+        padding: 16px 25px;
+
+        &.primary {
+            background: $blue;
+            color: white;
+            border: none;
+            width: 116px;
+        }
+
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
 }
