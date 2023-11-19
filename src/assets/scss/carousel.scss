@@ -1,0 +1,296 @@
+body {
+    margin: 0 21px;
+    letter-spacing: 1px;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+        margin: 0 48px;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+
+    }
+}
+
+.header h1 {
+    color: $darkBlue;
+    font-family: $brandHeadingFont;
+    letter-spacing: 1.5px;
+    padding: 0;
+    margin: 0;
+    line-height: 36.4px;
+
+    span {
+        height: 8px;
+        width: 100%;
+        top: 0;
+        margin-bottom: 20px;
+        display: block;
+        background: $darkBlue;
+    }
+}
+
+.header .carousel-indicators {
+    margin-top: 20px;
+    color: $darkBlue;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.component-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 58px;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        align-items: start;
+        gap: 60px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 146px;
+    }
+}
+
+.component-main img {
+    width: 100%;
+    max-width: 189px;
+
+    @media screen and (min-width: 600px) {
+        max-width: 320px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        align-items: start;
+        gap: 60px;
+    }
+}
+
+.carousel-container {
+    max-width: 285px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+    align-content: flex-start;
+
+    @media screen and (min-width: 560px) {
+        max-width: 488px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 688px;
+        width: 100%;
+    }
+}
+
+.carousel-outer {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+    align-content: flex-start;
+    max-width: 308px;
+
+    @media screen and (min-width: 560px) {
+        max-width: 518px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 770px;
+    }
+}
+
+.carousel-slide {
+    border-radius: 4px;
+    border: 2px solid $lightgrey;
+    padding: 16px;
+}
+
+.detail-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+    align-items: center;
+
+    img {
+        border-radius: 100%;
+        max-width: 100px;
+        width: 79px;
+        height: 79px;
+    }
+}
+
+.detail-container p {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: $brandBodyFont;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+
+    .username {
+        font-size: 16px;
+        color: $darkBlue;
+
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+        }
+    }
+
+    .location {
+        text-transform: capitalize;
+        color: $darkgrey
+    }
+}
+
+.btn-container {
+    display: flex;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 91px
+    }
+
+    .btn {
+        border: 2px solid black;
+        background: transparent;
+        border-radius: 25px;
+        width: 87px;
+        font-size: 16px;
+        padding: 16px 25px;
+
+        &.primary {
+            background: $blue;
+            color: white;
+            border: none;
+            width: 116px;
+        }
+
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+}
+
+/*  Slick Slider styling */
+/* Arrows */
+.slick-arrow {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 60px;
+    z-index: 99;
+    cursor: pointer;
+
+    &.slick-prev {
+        left: -30px;
+    }
+
+    &.slick-next {
+        right: -30px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        top: 0;
+    }
+}
+
+/* Dots */
+.dt-dots-container {
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 85px;
+    }
+}
+
+.slick-dots {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    font-family: "slick";
+    color: $blue;
+    font-size: 30px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "•";
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    color: $darkBlue;
+    font-size: 45px;
+}

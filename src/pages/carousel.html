@@ -1,0 +1,115 @@
+---
+title: Carousel
+assetsPath: /assets/
+contentPath: /assets/content/
+projNamespaceClass: "starter-proj"
+carouselComponent:
+  {
+    heading: "Contacts",
+    btn: "Contact",
+    btnTheme:
+      {
+        primaryOne: "blue",
+        primaryTwo: "yellow",
+        primaryThree: "green",
+        primaryFour: "red",
+      },
+    carouselArr:
+      [
+        {
+          firstName: "John",
+          lastName: "Doe",
+          office: "London",
+          location: "UK",
+        },
+        {
+          firstName: "Jane",
+          lastName: "Doe",
+          office: "Gratz",
+          location: "Austria",
+        },
+        {
+          firstName: "Ionna",
+          lastName: "Doe",
+          office: "Zurich",
+          location: "switzerland",
+        },
+      ],
+  }
+---
+
+<section class="{{projNamespaceClass}}">
+  <div class="header">
+    <h1><span></span>{{carouselComponent.heading}}</h1>
+    <div class="mb-dots-container"></div>
+  </div>
+
+  <div class="component-main">
+    <img
+      src="{{root}}/assets/images/carousel-background-image.svg"
+      alt="carousel background image"
+    />
+    <div class="carousel-outer">
+      <div class="arrow-container">
+        <button type="button" class="prev-arrow slick-prev">
+          <img
+            src="{{root}}/assets/images/arrow-left.svg"
+            alt="previous arrow"
+            width="48px"
+          />
+        </button>
+        <button type="button" class="next-arrow slick-next">
+          <img
+            src="{{root}}/assets/images/arrow-right.svg"
+            alt="next arrow"
+            width="48px"
+          />
+        </button>
+      </div>
+      <div class="carousel-container">
+        {{#each carouselComponent.carouselArr}}
+        <div class="carousel-slide">
+          <div class="detail-container">
+            <img
+              src="/assets/images/thumbnail.png"
+              alt="user thumbnail image"
+            />
+            <p>
+              <span class="username">{{firstName}}&nbsp;{{lastName}}</span>
+              <span class="location">{{office}},&nbsp;{{location}}</span>
+            </p>
+          </div>
+          <div class="btn-container">
+            <button class="btn" tabindex="0">Info</button>
+            <button class="btn primary" tabindex="0">Contact</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      <div class="dt-dots-container"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Initialize and set up slider -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".carousel-container").slick({
+      dots: true,
+      appendDots: $(".dt-dots-container"),
+      slidesToShow: 1,
+      centerPadding: "60px",
+      slidesToScroll: 1,
+      prevArrow: $(".prev-arrow"),
+      nextArrow: $(".next-arrow"),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            appendDots: $(".mb-dots-container"),
+          },
+        },
+      ],
+    });
+  });
+</script>
