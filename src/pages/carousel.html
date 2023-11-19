@@ -50,7 +50,35 @@ exampleComponent:
             <button class="btn primary" tabindex="0">Contact</button>
           </div>
         </div>
+        <div class="carousel-slide">
+          <div class="detail-container">
+            <img
+              src="/assets/images/thumbnail.png"
+              alt="user thumbnail image"
+            />
+            <p>
+              <span class="username">John&nbsp;Doe</span>
+              <span class="location">London,&nbsp;UK</span>
+            </p>
+          </div>
+          <div class="btn-container">
+            <button class="btn" tabindex="0">Info</button>
+            <button class="btn primary" tabindex="0">Contact</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Initialize and set up slider -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".carousel-container").slick({
+      dots: true,
+      slidesToShow: 1,
+      centerPadding: "60px",
+      slidesToScroll: 1,
+    });
+  });
+</script>
