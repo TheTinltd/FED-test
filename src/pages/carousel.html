@@ -24,7 +24,7 @@ exampleComponent:
   <div class="header">
     <h1><span></span>{{exampleComponent.heading}}</h1>
     <!-- Todo: replace with carousel dots -->
-    <div class="carousel-indicators">Lorem</div>
+    <div class="mb-dots-container"></div>
   </div>
 
   <div class="component-main">
@@ -99,6 +99,14 @@ exampleComponent:
       slidesToScroll: 1,
       prevArrow: $(".prev-arrow"),
       nextArrow: $(".next-arrow"),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            appendDots: $(".mb-dots-container"),
+          },
+        },
+      ],
     });
   });
 </script>
