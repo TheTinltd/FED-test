@@ -10,9 +10,15 @@ body {
 
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+
+    }
 }
 
 .header h1 {
@@ -77,8 +83,29 @@ body {
     }
 }
 
-.carousel-outer {
+.carousel-container {
     max-width: 285px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+    align-content: flex-start;
+
+    @media screen and (min-width: 560px) {
+        max-width: 488px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 688px;
+        width: 100%;
+    }
+}
+
+.carousel-outer {
     width: 100%;
     margin: 0;
     display: flex;
@@ -87,26 +114,23 @@ body {
     position: relative;
     border-radius: 4px;
     align-content: flex-start;
+    max-width: 308px;
 
-    @media screen and (min-width: 468px) and (max-width: 767px) {
-        max-width: 688px;
+
+    @media screen and (min-width: 560px) {
+        max-width: 518px;
         width: 100%;
-
     }
 
-    @media screen and (min-width: 768px) {
-        max-width: 688px;
-        width: 100%;
+    @media screen and (min-width: 1024px) {
+        max-width: 770px;
     }
 }
 
 .carousel-slide {
     border-radius: 4px;
-    fill: #ffffff;
-    stroke-width: 1;
     border: 2px solid $lightgrey;
     padding: 16px;
-    margin: 0 24px;
 }
 
 .detail-container {
@@ -190,11 +214,11 @@ body {
     cursor: pointer;
 
     &.slick-prev {
-        left: -25px;
+        left: -30px;
     }
 
     &.slick-next {
-        right: -25px;
+        right: -30px;
     }
 
     @media screen and (min-width: 1024px) {

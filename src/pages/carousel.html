@@ -5,7 +5,7 @@ contentPath: /assets/content/
 projNamespaceClass: "starter-proj"
 carouselComponent:
   {
-    heading: "Carousel heading",
+    heading: "Contacts",
     btn: "Contact",
     btnTheme:
       {
@@ -41,7 +41,6 @@ carouselComponent:
 <section class="{{projNamespaceClass}}">
   <div class="header">
     <h1><span></span>{{carouselComponent.heading}}</h1>
-    <!-- Todo: replace with carousel dots -->
     <div class="mb-dots-container"></div>
   </div>
 
@@ -76,7 +75,7 @@ carouselComponent:
               alt="user thumbnail image"
             />
             <p>
-              <span class="username">{{firstName}}&nbsp;{{lastname}}</span>
+              <span class="username">{{firstName}}&nbsp;{{lastName}}</span>
               <span class="location">{{office}},&nbsp;{{location}}</span>
             </p>
           </div>
